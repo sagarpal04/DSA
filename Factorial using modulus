@@ -1,0 +1,19 @@
+// input : 212
+// output : 616613957
+#include<iostream>
+using namespace std;
+unsigned long long factorial(unsigned long long n, unsigned long long m){
+    unsigned long long ans = 1;
+    for(unsigned long long i = 2; i <= n; i++){
+        ans = (ans * i) % m;
+    }
+    return ans;
+}
+int main(){
+    unsigned long long n;
+    cout << "Enter a number : ";
+    cin >> n;
+    unsigned long long m = 1000000007;
+    unsigned long long ans = factorial(n,m);
+    cout << "Answer is " << ans << endl;
+}
